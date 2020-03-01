@@ -7,6 +7,8 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/CapabilityAgents/ExternalMediaPlayer/src
     set(HAS_EXTERNAL_MEDIA_PLAYER_ADAPTERS ON)
 endif()
 
+set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
+
 include(build/BuildDefaults.cmake)
 include(tools/Testing.cmake)
 
